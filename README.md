@@ -1,4 +1,4 @@
-# Pedestrian-intension-detection-based-on-movement
+# Pedestrian intension detection based on movement
 
 ## Problem statement
 Design and develop an algorithm fpr pedestrian intension detection based on motion tracking.
