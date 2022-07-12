@@ -33,4 +33,25 @@ In the YOLOv3 algorithm for object detection:
 
 
 2. Pedestrian Tracking using Deep SORT algorithm
+To classify the pedestrians as the above quoted classes we need to know their motion. The pedestrian tracking system accomplishes this by monitoring their mobility, or by comparing the pedestrians' locations in various frames of the video.
+
+In the Deep SORT algorithm 
+* This takes the tensor coming out from the YOLO algorithm as an input.
+* Produces the tensor which contains the information of the tracking Ids.
+* It is the advancement of the SORT algorithm.
+* Which properly deals with the occlusion the re appearance which is not dealt with SORT
+* It relies on the Kalman filter that tracks an object based on the available and previous predictions to determine the current state of the object.
+
+
+3. Pedestrian Classification using Spatio-temporal densnet
+There will be many pedestrians crossing a busy street; some will be on a pathway, some will be trying to cross, some will be closer to the vehicle, and some will be farther away. Here, we need categorize all of these pedestrians into two categories.
+
+For the classification of the pedestrian into the threat posing and non-threat posing categories, the Spatio-temporal densnet is used, in this algorithm
+* There are about 106 CNN layers.
+* It is composed of three dense blocks separated by the transition layers.
+* Each dense block is composed of four 1x1x1 and 3x3x3 convolutions.
+* For training the dense net block takes an input sequence of 16 frames before the action of crossing.
+* When the number of frames has not reached the minimum required for dense-net classification it uses a sliding window technique that multiplies the frames, and hence the system takes an input sequence of the frame and provides an output classification for all pedestrian’s action in every frame.
+
+
 
