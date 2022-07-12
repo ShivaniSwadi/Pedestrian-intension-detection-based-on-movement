@@ -23,6 +23,7 @@ The complete system is designed into three main steps:
 
 ### Speecifications
 1. Pedestrian Detection using YOLOv3 algorithm
+
 The camera captures a wide variety of obects on the road. In a few instances, we also see animals crossing the road. Considering that the only motion we are interested in in this research is that of humans, hence here humans on the road are referred to as pedestrians. These days, the main concern is how to address the problems that autonomous vehicles have with causing accidents. Accidents involving pedestrians are the most significant of these problems. Therefore, it is crucial for us to identify pedestrians on the road and classify them as follows: Those who pose a threat to the vehicle those who don't.
 
 In the YOLOv3 algorithm for object detection:
@@ -33,6 +34,7 @@ In the YOLOv3 algorithm for object detection:
 
 
 2. Pedestrian Tracking using Deep SORT algorithm
+
 To classify the pedestrians as the above quoted classes we need to know their motion. The pedestrian tracking system accomplishes this by monitoring their mobility, or by comparing the pedestrians' locations in various frames of the video.
 
 In the Deep SORT algorithm 
@@ -44,6 +46,7 @@ In the Deep SORT algorithm
 
 
 3. Pedestrian Classification using Spatio-temporal densnet
+
 There will be many pedestrians crossing a busy street; some will be on a pathway, some will be trying to cross, some will be closer to the vehicle, and some will be farther away. Here, we need categorize all of these pedestrians into two categories.
 
 For the classification of the pedestrian into the threat posing and non-threat posing categories, the Spatio-temporal densnet is used, in this algorithm
