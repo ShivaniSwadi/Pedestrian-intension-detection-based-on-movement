@@ -23,5 +23,14 @@ The complete system is designed into three main steps:
 
 ### Speecifications
 1. Pedestrian Detection using YOLOv3 algorithm
+The camera captures a wide variety of obects on the road. In a few instances, we also see animals crossing the road. Considering that the only motion we are interested in in this research is that of humans, hence here humans on the road are referred to as pedestrians. These days, the main concern is how to address the problems that autonomous vehicles have with causing accidents. Accidents involving pedestrians are the most significant of these problems. Therefore, it is crucial for us to identify pedestrians on the road and classify them as follows: Those who pose a threat to the vehicle those who don't.
 
+In the YOLOv3 algorithm for object detection:
+* It is an advanced object detection algorithm having 53 convolutional layers
+* This algorithm takes an image of 416X426 resolution as an input.
+* This produces an output of tensor of size nx6 where n is the number of objects detected.
+* Compared to other algorithms YOLOv3 is fast and accurate in terms of mean average precision and intersection over union values.
+
+
+2. Pedestrian Tracking using Deep SORT algorithm
 
